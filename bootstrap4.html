@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e0e7de8bce.js" crossorigin="anonymous"></script><!-- font asome 5 my kit link -->
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      color:#818181;
+      line-height:1.8;
+    }
+
+    h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  } 
+  .navbar {
+    background-color:#46134b;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+   .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #46134b !important;
+    background-color: #fff;
+  }
+  /*.navbar-toggle {
+    border-color: transparent;
+    color: #fff;
+  }
+*/   
+#dropmanu {
+  background-color:#8b4093;
+  color:white;
+}
+.thumbnail img {
+  }
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+    .jumbotron {
+      background-color:#68266f; /* Orange */
+      color: #fff;
+      border-radius:0;
+      padding:100px 25px;
+      font-family: Montserrat, sans-serif;
+
+    }
+    .headertext {
+      margin:0;
+      text-align:center;
+      color:blue;
+      padding:10px 0px;
+      text-shadow:2px 2px 3px yellow;
+    }
+    .container-fluid {
+      padding:60px 50px;
+    }
+    .bg-grey {
+       background-color: #f48095;
+    }
+    .logo {
+    color: #9f3548;
+    font-size: 200px;
+    }
+    .small-logo {
+    color: #68266f;
+    font-size: 50px;
+    }
+    .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    }
+   .thumbnail img {
+    width: 100%;
+    height:auto;
+    margin-bottom: 10px;
+    transition:transform .3s;
+    }
+    
+    
+   
+    .left-caro, .right-caro {
+    background-color: #f4511e;
+    }
+    .carousel-indicators li {
+    background-color:red;
+    }
+    .carousel-item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 60px 0;
+  }
+  .carousel-item span {
+    font-style:normal;
+  }
+ .panel {
+    border: 1px solid #9f3548; 
+    border-radius:0 !important;
+    transition: box-shadow 0.2s;
+  }
+  .panel:hover {
+    box-shadow:5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border:1px solid #f4511e;
+    background-color:#fff;
+    color:#f4511e;
+  }
+  .panel-heading {
+     color: #fff !important;
+    background-color: #2e6317;
+    padding: 25px;
+   
+  }
+  .panel-footer  {
+    background-color:white !important;
+  }
+   .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+    .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #68266f;
+    color: #fff;
+  }
+ 
+  }
+  .panel-body {
+    margin-top:15px;
+  }
+  footer {
+    background-color: #380810;
+  }
+  .slideanim {
+    visibility: hidden;
+  }
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+   @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+    @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body>
+ 
+
+
+<div id="company" class="jumbotron m-0">
+  <div class="cntainer text-center">
+   <h1>BD10 Web Company</h1><br>
+   <p>We specialize in Web developing</p>
+   <form class="form-inline justify-content-center">
+     <div class="input-group">
+       <input type="email" class="form-control" size="50" placeholder="Enter your Email" required>
+       <div class="input-group-btn">
+         <button type="button" class="btn btn-danger">Subscribe</button>
+       </div>
+     </div>
+   </form>
+  </div>
+</div>
+
+<div class="container-fluid py-10px" style="background:#95a537;">
+  <h2 class="headertext">Faruk, One of the best developer by BD10</h2>
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="images/FarukBD10.jpeg" class="rounded" width="100px" height="30px"><span> FarukBD10</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mynavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#company">BD10</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#service">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </li>
+        <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+      More
+      </a>
+      <div id="dropmanu" class="dropdown-menu">
+        <a class="dropdown-item" href="#pricing">Pricing</a>
+        <a class="dropdown-item" href="#contact">Contact</a>
+        <a class="dropdown-item" href="#">Previous work</a>
+      </div>
+    </li>   
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <form class="form-inline" action="/action_page.php">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+           <i class="fas fa-search fa-5px"></i>
+        </span>
+      </div>
+    </div>
+    </form>
+  </ul>
+ </div>
+</div>
+</form>
+</ul>
+</div>  
+</nav>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Commpany Page</h2>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+        <button class="btn btn-default btn-lg">Get in Toush</button>
+    </div>
+    <div class="col-sm-4 text-center">
+    <i class='fas fa-signal logo'></i>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4 text-center">
+      <i class='fas fa-globe-europe logo'></i>
+    </div>
+    <div class="col-sm-8">
+    <h2>Our values </h2>
+    <h4><strog> Mission:</strog>  Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+    <P><strong>Vission:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
+    </div>
+  </div>
+</div>
+<!-- container (service section) -->
+<div id="service" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fas fa-power-off  small-logo"></i>
+     <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-heart  small-logo"></i>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-lock small-logo"></i>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fas fa-leaf small-logo"></i>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-certificate  small-logo"></i>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-wrench small-logo"></i>
+      <h4>HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+<!-- container for (portfolio) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img id="pimg" src="images/img2.jpg" class="img-thumbnail" width="400" height="265">
+        <p><strong>Unsplash</strong></p>
+        <p>Web Developing by BD10</p>
+      </div>
+    </div>
+     <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/img1.jpeg" class="img-thumbnail" width="400" height="265">
+        <p><strong>Unsplash</strong></p>
+        <p>Web Developing by BD10</p>
+      </div>
+    </div>
+     <div class="col-sm-4">
+      <div class="thumbnail ">
+        <img src="images/img3.jpg" class="img-thumbnail pimg"  width="400" height="265">
+        <p><strong>Unsplash</strong></p>
+        <p>Web Developing by BD10</p>
+      </div>
+    </div>
+  </div><br>
+
+<h2>What our customers says</h2>
+<div id="myCarousel" class="carousel slide text-center"  data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+     <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- weaper for slides -->
+  <div class="carousel-inner" role="listbox">
+       <div class="carousel-item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="carousel-item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="carousel-item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+  </div>
+  <!-- Left and right control -->
+   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon left-caro"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon right-caro"></span>
+  </a>
+</div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+<!-- container (contact sesction) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+    <p> contact us and we'll get back to you within 24 hours.</p>
+    <p><span class="fas fa-map-marker"></span>   Dhaka, BD</p>
+    <p><span class="fas fa-mobile-alt"></span> +8801700000000</p> 
+    <p><span class="  far fa-envelope"></span>  mail@somthig.com</p>    
+  </div>
+  <div class="col-sm-7 slideanim">
+    <div class="row">
+      <div class="col-sm-6 form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required >
+      </div>
+      <div class="col-sm-6 form-group">
+        <input type="email" name="email" id="email"
+        class="form-control" placeholder="Enter your email" required>
+      </div>
+    </div>
+    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+    <div class="row">
+      <div class="col-sm-12 form-group">
+        <button class="btn btn-danger pull-rigbt" type="submit">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<footer class="container-fluid text-center">
+  <h3>faruk @ developing by BD10</h3>
+</footer>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</div>
+</body>
+</html>
